@@ -4,7 +4,7 @@ const Navbar = () => {
   const NAVBAR_OPTIONS = ["Home", "Projects", "About-me", "Contact"];
 
   return (
-    <div className="w-full border-b-[0.1px] border-[#ffffff22] flex justify-center relative">
+    <div className="w-full border-b-[0.1px] border-[#ffffff22] flex justify-center relative font-montserrat">
       <div className="flex gap-10 border- w-full justify-center grow">
         {NAVBAR_OPTIONS.map((option, index) => (
           <NavbarOption option={option} key={index} />

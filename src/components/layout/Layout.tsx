@@ -9,9 +9,9 @@ const Layout = ({ children }: Props) => {
   return (
     <div className="bg-background text-white h-screen w-screen flex flex-col">
       <Navbar />
-      <div className="h-full flex">
+      <div className="h-full flex w-full font-montserrat">
         <SideBar />
-        <div>{children}</div>
+        {children}
       </div>
     </div>
   );
