@@ -5,7 +5,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full border-b-[0.1px] border-[#ffffff22] flex justify-center relative font-montserrat">
-      <div className="flex gap-10 border- w-full justify-center grow">
+      <div className="flex gap-10 w-full justify-center grow">
         {NAVBAR_OPTIONS.map((option, index) => (
           <NavbarOption option={option} key={index} />
         ))}
@@ -32,12 +32,14 @@ const DownloadResume = () => {
 
 const NavbarOption = ({ option }: NavbarOptionProps) => {
   return (
-    <a
-      href={option}
-      className="text-md border-b-[0.5px] border-[#ffffff00] group-hover:border-white py-4 hover:cursor-pointer flex justify-center items-center "
-    >
-      {option}
-    </a>
+    <div className="relative">
+      <a
+        href={option}
+        className="text-md  py-4 hover:cursor-pointer flex justify-center items-center before:absolute before:bottom-0 before:w-full before:h-[.5px] hover:before:bg-white before:duration-100 hover:scale-[1.02] duration-100"
+      >
+        {option}
+      </a>
+    </div>
   );
 };
 
