@@ -6,18 +6,21 @@ const SideBar = () => {
   return (
     <div className="border-r-[0.5px] px-4 py-4 border-[#ffffff22] max-w-lg">
       <div className="flex flex-col gap-20 border-[#ffffff22] max-w-lg mt-10">
-        <a href="https://github.com/Clanie1">
+        <a href="https://github.com/Clanie1" target="_blank">
           <BsGithub className="w-[30px] h-[30px] hover:scale-110 duration-75" />
         </a>
 
-        <a href="https://www.linkedin.com/in/daniel-barocio-2746981a0/">
+        <a
+          href="https://www.linkedin.com/in/daniel-barocio-2746981a0/"
+          target="_blank"
+        >
           <BiLogoLinkedin className="w-[30px] h-[30px] hover:scale-110 duration-75" />
         </a>
 
-        <a href="https://www.instagram.com/danibarocio/">
+        <a href="https://www.instagram.com/danibarocio/" target="_blank">
           <AiOutlineInstagram className="w-[30px] h-[30px] hover:scale-110 duration-75" />
         </a>
-        <a href="#">
+        <a href="#" target="_blank">
           <BiLogoGmail className="w-[30px] h-[30px] hover:scale-110 duration-75" />
         </a>
       </div>
