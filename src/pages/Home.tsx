@@ -1,8 +1,8 @@
-import me from "../assets/img/me2.png";
+import me from "../assets/img/me1.png";
 
 const Home = () => {
   return (
-    <div className="flex w-5/6 m-auto items-center justify-center border- p-4">
+    <div className="flex w-5/6 m-auto items-center justify-center gap-2 p-2">
       <div className="flex flex-col w-1/4 border-">
         <label className="text-4xl">Hi! I'm Daniel BAROCIO</label>
         <div className="flex items-center gap-2">
@@ -12,7 +12,7 @@ const Home = () => {
           <div className="w-full h-[2px] bg-white" />
         </div>
       </div>
-      <img src={me} className="object-cover w-1/2  border-" />
+      <img src={me} className="object-cover w-1/2 border-" />
       <div className="flex flex-col w-1/4 border- text-right font-montserrat">
         <h1>first thing</h1>
         <h1>second thing</h1>
