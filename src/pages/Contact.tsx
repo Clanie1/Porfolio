@@ -4,9 +4,9 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   return (
-    <div className="w-full h-full p-6 m-auto flex">
-      <div className="w-1/2 text-center m-6 border-2 p-4 flex flex-col">
-        <div className="flex flex-col gap-4 px-8">
+    <div className="w-full md:h-full p-6 m-auto flex flex-col md:flex-row overflow-hidden">
+      <div className="md:w-1/2 text-center md:m-6 border-2 p-4 flex flex-col">
+        <div className="flex flex-col gap-4 md:px-8 px-2">
           <h1 className="text-4xl font-bold uppercase">Contact</h1>
           <p className="text-md font-light">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. At,
@@ -31,9 +31,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="w-1/2 bg-[#343443cc] m-6 p-4">
+      <div className="md:w-1/2 bg-[#343443cc] md:mx-6 my-6 p-4">
         <h1 className="uppercase font-bold text-4xl text-center">
-          Contact From
+          Contact Form
         </h1>
         <div className="mt-10 px-6">
           <ContactForm />
@@ -65,7 +65,7 @@ const ContactForm = () => {
 
   return (
     <form ref={form} className="flex flex-col gap-10" onSubmit={sendEmail}>
-      <div className="flex w-full justify-between gap-6">
+      <div className="flex flex-col md:flex-row w-full justify-between gap-6">
         <div className="flex flex-col w-full">
           <label className="font-bold">First Name</label>
           <TextInput name="first_name" />
@@ -75,7 +75,7 @@ const ContactForm = () => {
           <TextInput name="last_name" />
         </div>
       </div>
-      <div className="flex w-full justify-between gap-6">
+      <div className="flex flex-col md:flex-row w-full justify-between gap-6">
         <div className="flex flex-col w-full">
           <label className="font-bold">Email</label>
           <TextInput name="email" type="email" />
