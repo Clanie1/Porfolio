@@ -1,4 +1,6 @@
 import { AiOutlineSend } from "react-icons/ai";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   return (
@@ -42,31 +44,50 @@ const Contact = () => {
 };
 
 const ContactForm = () => {
+  const form = useRef<any>();
+  const sendEmail = async (e: any) => {
+    e.preventDefault();
+    if (form.current !== undefined) {
+      try {
+        await emailjs.sendForm(
+          import.meta.env.VITE_YOUR_SERVICE_ID,
+          import.meta.env.VITE_YOUR_TEMPLATE_ID,
+          form.current,
+          import.meta.env.VITE_YOUR_PUBLIC_KEY
+        );
+        alert("Email sent successfully!");
+        form.current.reset();
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  };
+
   return (
-    <form className="flex flex-col gap-10">
+    <form ref={form} className="flex flex-col gap-10" onSubmit={sendEmail}>
       <div className="flex w-full justify-between gap-6">
         <div className="flex flex-col w-full">
           <label className="font-bold">First Name</label>
-          <TextInput />
+          <TextInput name="first_name" />
         </div>
         <div className="flex flex-col w-full">
           <label className="font-bold">Last Name</label>
-          <TextInput />
+          <TextInput name="last_name" />
         </div>
       </div>
       <div className="flex w-full justify-between gap-6">
         <div className="flex flex-col w-full">
           <label className="font-bold">Email</label>
-          <TextInput />
+          <TextInput name="email" type="email" />
         </div>
         <div className="flex flex-col w-full">
           <label className="font-bold">Phone</label>
-          <TextInput />
+          <TextInput name="phone" type="number" />
         </div>
       </div>
       <div className="flex flex-col">
-        <label className="font-bold">How can i help?</label>
-        <TextInput />
+        <label className="font-bold">How can I help?</label>
+        <TextInput name="message" />
       </div>
       <button
         type="submit"
@@ -79,8 +100,20 @@ const ContactForm = () => {
   );
 };
 
-const TextInput = () => {
-  return <input className="bg-inherit border-b-[1px] py-1 outline-none" />;
+const TextInput = ({
+  name,
+  type = "text",
+}: {
+  name: string;
+  type?: string;
+}) => {
+  return (
+    <input
+      className="bg-inherit border-b-[1px] py-1 outline-none"
+      name={name}
+      type={type}
+    />
+  );
 };
 
 export default Contact;
