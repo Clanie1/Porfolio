@@ -9,10 +9,10 @@ const Contact = () => {
         <div className="flex flex-col gap-4 md:px-8 px-2">
           <h1 className="text-4xl font-bold uppercase">Contact</h1>
           <p className="text-md font-light">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At,
-            laborum ipsa. Animi aliquid et minus repellat harum iste earum
-            repellendus quaerat quam praesentium. Cumque iste, adipisci quisquam
-            ab odit labore!
+            I'm passionate about crafting stunning websites that blend
+            creativity and functionality. Let's collaborate on your next
+            project! Contact me for innovative solutions and seamless user
+            experiences.
           </p>
         </div>
         <div className="mt-8 flex flex-col gap-8">
@@ -23,11 +23,18 @@ const Contact = () => {
           </div>
           <div>
             <h1 className="text-lg font-bold uppercase">Github</h1>
-            <label>Clanie1</label>
+            <a href="https://github.com/Clanie1" className="underline">
+              Clanie1
+            </a>
           </div>
           <div>
             <h1 className="text-lg font-bold uppercase">Linkedin</h1>
-            <label>Daniel Barocio</label>
+            <a
+              href="https://www.linkedin.com/in/daniel-barocio-2746981a0/"
+              className="underline"
+            >
+              Daniel Barocio
+            </a>
           </div>
         </div>
       </div>
