@@ -1,25 +1,12 @@
 import { AiOutlineDownload } from "react-icons/ai";
 import ResumeDaniel from "../../assets/resume/Resume Daniel.pdf";
-import { useState } from "react";
 
 const Navbar = () => {
   const NAVBAR_OPTIONS = ["Home", "Projects", "About-me", "Contact"];
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
-    <div className="flex border-2 h-fit w-full md:border-b-[0.1px] border-[#ffffff22] justify-end relative font-montserrat p-4 md:p-0">
-      <BurgerMenu
-        onClick={() => {
-          setIsMenuOpen(!isMenuOpen);
-        }}
-        ClassName="absolute"
-      />
-      <div
-        className={`${
-          isMenuOpen ? "flex" : "hidden"
-        } md:flex gap-10 w-full justify-center grow`}
-      >
+    <div className="flex gap-6 h-fit w-full border-b-[0.1px] border-[#ffffff22] justify-between md:justify-end relative font-montserrat ">
+      <div className="flex md:flex gap-4 md:gap-10 w-full justify-center grow">
         {NAVBAR_OPTIONS.map((option, index) => (
           <NavbarOption option={option} key={index} />
         ))}
@@ -64,25 +51,6 @@ const NavbarOption = ({ option }: NavbarOptionProps) => {
       >
         {option}
       </a>
-    </div>
-  );
-};
-
-const BurgerMenu = ({
-  ClassName,
-  onClick,
-}: {
-  ClassName?: string;
-  onClick: () => void;
-}) => {
-  return (
-    <div
-      className={`w-[35px] md:hidden h-[40px] flex flex-col gap-2 ` + ClassName}
-      onClick={onClick}
-    >
-      <div className="w-full h-[2px] bg-white rounded-full"></div>
-      <div className="w-full h-[2px] bg-white rounded-full"></div>
-      <div className="w-full h-[2px] bg-white rounded-full"></div>
     </div>
   );
 };
