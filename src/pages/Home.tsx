@@ -4,7 +4,9 @@ const Home = () => {
   return (
     <div className="flex flex-col md:flex-row w-5/6 m-auto items-center h-full md: md:justify-center gap-8 md:gap-2 md:p-2">
       <div className="flex flex-col md:w-1/4 mt-8 md:mt-0 border-">
-        <label className="text-4xl text-center">Hi! I'm Daniel BAROCIO</label>
+        <label className="text-4xl text-center md:text-start">
+          Hi! I'm Daniel BAROCIO
+        </label>
         <div className="flex flex-col md:flex-row items-center gap-2">
           <label className="text-md flex-grow whitespace-nowrap">
             And I am a fullstack developer
