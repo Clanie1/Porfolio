@@ -1,6 +1,6 @@
 import { BsGithub } from "react-icons/bs";
 import { AiOutlineInstagram } from "react-icons/ai";
-import { BiLogoGmail, BiLogoLinkedin } from "react-icons/bi";
+import { BiLogoFacebook, BiLogoLinkedin } from "react-icons/bi";
 
 const SideBar = () => {
   return (
@@ -20,8 +20,8 @@ const SideBar = () => {
         <a href="https://www.instagram.com/danibarocio/" target="_blank">
           <AiOutlineInstagram className="w-[30px] h-[30px] hover:scale-110 duration-75" />
         </a>
-        <a href="#" target="_blank">
-          <BiLogoGmail className="w-[30px] h-[30px] hover:scale-110 duration-75" />
+        <a href="https://www.facebook.com/daniel.barocio.16/" target="_blank">
+          <BiLogoFacebook className="w-[30px] h-[30px] hover:scale-110 duration-75" />
         </a>
       </div>
     </div>
