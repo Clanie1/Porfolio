@@ -1,6 +1,8 @@
 import PROJECTS from "../data/projects";
 import { ReactNode, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import WhiteBtn from "../components/btns/WhiteBtn";
+import TransparentBtn from "../components/btns/TransparentBtn";
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
@@ -82,16 +84,14 @@ const ProjectDisplay = ({ project }: any) => {
         </div>
         <div className="md:w-1/2 w-full mt-10 md:m-0">
           <div className="flex md:gap-5 gap-2 justify-center ">
-            <button className="border-[1px] border-white md:w-[200px] px-4 py-4 flex justify-center items-center">
+            <TransparentBtn href="#">
               FindMe.com
               <IoIosArrowForward className="w-5 h-5" />
-            </button>
-            <a href={project.github}>
-              <button className="bg-white md:w-[200px] py-4 px-4 text-black flex justify-center items-center">
-                Github Repository
-                <IoIosArrowForward className="w-5 h-5" />
-              </button>
-            </a>
+            </TransparentBtn>
+            <WhiteBtn href={project.github}>
+              Github Repository
+              <IoIosArrowForward className="w-5 h-5" />
+            </WhiteBtn>
           </div>
         </div>
       </div>
