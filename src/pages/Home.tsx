@@ -1,5 +1,5 @@
 import { AiOutlineArrowRight } from "react-icons/ai";
-import me from "../assets/img/me1.png";
+import me from "../assets/img/me.png";
 import DownloadResume from "../components/btns/DownloadResumeBtn";
 
 const Home = () => {
