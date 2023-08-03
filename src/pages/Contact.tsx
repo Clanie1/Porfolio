@@ -19,7 +19,6 @@ const Contact = () => {
           <div className="">
             <h1 className="text-lg font-bold uppercase">Mail</h1>
             <label className="font-light text-md">danybarociov@gmail.com</label>
-            d
           </div>
           <div>
             <h1 className="text-lg font-bold uppercase">Github</h1>
