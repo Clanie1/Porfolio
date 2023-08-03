@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <div className="w-full h-full m-auto flex flex-col">
       {/* content */}
-      <div className="w-full h-full">
+      <div className="w-full max-w-[1300px] h-full m-auto">
         <ProjectDisplay project={PROJECTS[selectedProjectIndex]} />
       </div>
       {/* low bar */}
