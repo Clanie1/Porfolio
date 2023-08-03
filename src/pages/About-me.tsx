@@ -3,6 +3,9 @@ import TransparentBtn from "../components/btns/TransparentBtn";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { RiComputerLine } from "react-icons/ri";
 import { BsGearFill } from "react-icons/bs";
+import meBlackWhite from "../assets/img/meBlack&White.jpeg";
+
+// import {meBlack&White} from "./"
 
 const AboutMe = () => {
   const ExpertiseAreas = [
@@ -30,8 +33,8 @@ const AboutMe = () => {
     <div className="w-[80%] mx-auto flex flex-col py-10">
       <div className="flex gap-5 flex-col md:flex-row ">
         <img
-          src="https://scontent.fmxl1-1.fna.fbcdn.net/v/t1.6435-9/191005932_1224698047978241_1056180671590670133_n.jpg?_nc_cat=111&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeG4Ov1hYywq74DDdb3zSgPIL8-pFjo9u9Qvz6kWOj271EK_anfR9fy7zr5ycD3Oq5_m0sJOPAoOTX7T_k78-3Ch&_nc_ohc=9-rtAoCqN_0AX_tAOcn&_nc_ht=scontent.fmxl1-1.fna&oh=00_AfDaHg0FzigJzGHe74Znh1N_7csenoH6K4NOL8j3MPHfvQ&oe=64F2106C"
-          className="md:w-1/2 h-[350px] border-2 object-cover"
+          src={meBlackWhite}
+          className="md:w-1/2 h-[350px] border-2 object-cover object-top"
         ></img>
         <div className="border-red-200 md:w-1/2 md:max-w-[600px] p-2 px-4">
           <div className=" flex md:flex-row flex-col-reverse items-center gap-4">
