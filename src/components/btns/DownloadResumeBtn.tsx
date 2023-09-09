@@ -1,5 +1,5 @@
 import { AiOutlineDownload } from "react-icons/ai";
-import ResumeDaniel from "../../assets/resume/Resume Daniel.pdf";
+import ResumeDaniel from "../../assets/resume/Resume Daniel 2023.pdf";
 
 const DownloadResumeBtn = () => {
   return (
